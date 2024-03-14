@@ -125,7 +125,7 @@ export default function Home() {
         </div>
       </div>
 
-      <div>
+      <div className="mt-10">
         Result:
 
         {JSON.stringify(result)}
