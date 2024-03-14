@@ -2,7 +2,12 @@ from fastapi import FastAPI, HTTPException
 from starlette.middleware.cors import CORSMiddleware
 import db
 
-app = FastAPI()
+async def lifespan(app: FastAPI):
+    db.create_table()
+    print("init!")
+    yield
+
+app = FastAPI(lifespan=lifespan)
 
 origins = ['*']
 
