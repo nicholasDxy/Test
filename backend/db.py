@@ -2,8 +2,7 @@ import psycopg2
 import os
 
 # postgres url params, read from sys env variable
-# POSTGRES_URL = os.getenv('POSTGRES_URL')
-POSTGRES_URL="postgres://default:YXSaqje5Z0zQ@ep-lucky-moon-a4xaxmyq-pooler.us-east-1.aws.neon.tech:5432/verceldb?sslmode=require"
+POSTGRES_URL = os.getenv('POSTGRES_URL')
 
 def execSQL(query):
     try:
